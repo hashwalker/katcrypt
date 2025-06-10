@@ -33,5 +33,5 @@ __author__ = "Hashwalker"
 __all__ = ['encrypt', 'decrypt']
 
 # Supported algorithms for reference
-SUPPORTED_CIPHERS = ['aes', 'mars']
+SUPPORTED_CIPHERS = ['aes', 'mars', 'threefish']
 SUPPORTED_MODES = ['cbc', 'cfb', 'ctr', 'ecb', 'gcm', 'ofb']
