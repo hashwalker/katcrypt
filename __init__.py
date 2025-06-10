@@ -26,7 +26,7 @@ print(f"Decrypted: {decrypted}")
 from .encrypt import encrypt
 from .decrypt import decrypt
 
-__version__ = "1.0.0"
+__version__ = "0.1.0"
 __author__ = "Hashwalker"
 
 # Expose both functions at package level
