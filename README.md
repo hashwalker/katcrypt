@@ -26,8 +26,6 @@ KatCrypt provides implementations of modern block ciphers and standard modes of 
 ### From Source
 ```bash
 git clone https://github.com/hashwalker/katcrypt.git
-cd katcrypt
-pip install -e .
 ```
 
 ### Requirements
