@@ -23,9 +23,16 @@ KatCrypt provides implementations of modern block ciphers and standard modes of 
 
 ## Installation
 
+### From PyPI
+```bash
+pip install katcrypt
+```
+
 ### From Source
 ```bash
 git clone https://github.com/hashwalker/katcrypt.git
+cd katcrypt
+pip install -e .
 ```
 
 ### Requirements
@@ -34,43 +41,7 @@ git clone https://github.com/hashwalker/katcrypt.git
 
 ## Usage
 
-### Functional API
-```python
-import katcrypt
-from katcrypt.utils import generate_key, generate_iv
-
-# Basic encryption example
-key = generate_key(256)  # 256-bit key for AES
-iv = generate_iv(16)     # 128-bit IV
-plaintext = b"Hello, World! This is a secret message."
-
-print(f"Original: {plaintext}")
-
-# Encrypt the message
-ciphertext = katcrypt.encrypt(
-    cipher="aes", 
-    mode="cbc", 
-    key=key, 
-    plaintext=plaintext, 
-    iv=iv
-)
-
-print(f"Encrypted: {ciphertext.hex()}")
-
-# Decrypt the message
-decrypted = katcrypt.decrypt(
-    cipher="aes", 
-    mode="cbc", 
-    key=key, 
-    ciphertext=ciphertext, 
-    iv=iv
-)
-
-print(f"Decrypted: {decrypted}")
-print(f"Success: {plaintext == decrypted}")
-```
-
-### Object-Oriented API
+### API
 ```python
 from katcrypt.ciphers.aes import AES
 from katcrypt.modes.cbc import CBC
